@@ -6,3 +6,5 @@ const rl = Readline.createInterface({
 	output: process.stdout,
 	terminal: false
 });
+
+rl.setPrompt('foster >');
