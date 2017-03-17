@@ -1,0 +1,19 @@
+{
+  "name": "weather-bot",
+  "version": "1.0.0",
+  "description": "a simple interactive shell node.js bot that check the weather",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sons-of-jerome/weather-bot.git"
+  },
+  "author": "Barnabas Nomo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sons-of-jerome/weather-bot/issues"
+  },
+  "homepage": "https://github.com/sons-of-jerome/weather-bot#readme"
+}
