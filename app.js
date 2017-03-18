@@ -18,6 +18,9 @@ rl.on('line', reply => {
 				console.log('Hello there');
 				rl.prompt();
 				break;
+			case 'Exit':
+				console.log('Have a great day :)!');
+				process.exit(0);
 			default:
 				console.log("I don't know what you mean by \"%s\" :(", reply);
 				rl.prompt();
