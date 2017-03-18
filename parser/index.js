@@ -1,4 +1,5 @@
 'use strict';
+const colors = require('colors');
 let getFeel = temp => {
     if (temp < 5) { return "shivering cold"; }
     else if (temp < 15) return 'pretty cold'
@@ -15,7 +16,7 @@ let currentWeather = response => {
         // Access Conditions
         let { text, temp } = resp.item.condition;
 
-        return `Right now, it is ${text.toLowerCase()} in ${location}. It is ${getFeel(Number(temp))} at ${temp} degrees Celsius.`
+        return `Right now, it is ${text.toLowerCase().red.bold} in ${location.bold}. It is ${getFeel(Number(temp))} at ${temp.red.bold} degrees Celsius.`
     }
 }
 
