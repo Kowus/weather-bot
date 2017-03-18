@@ -11,5 +11,5 @@ rl.setPrompt('foster > ');
 rl.prompt();
 rl.on('line', reply => {
 	console.log(`You said ${reply}`);
-
+	rl.prompt();
 });
