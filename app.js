@@ -8,8 +8,8 @@ const rl = readline.createInterface({
 });
 const matcher = require('./matcher');
 
-rl.setPrompt('chelsey > ');
+rl.setPrompt('jerome > ');
 rl.prompt();
 rl.on('line', reply => {
-
+	matcher(reply)
 });
