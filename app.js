@@ -15,7 +15,7 @@ rl.on('line', reply => {
 		switch (data.intent)
 		{
 			case 'Hello':
-				console.log('Hello there');
+				console.log(`${data.entities.greeting} to you too`);
 				rl.prompt();
 				break;
 			case 'Exit':
