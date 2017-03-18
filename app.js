@@ -6,10 +6,10 @@ const rl = readline.createInterface({
 	output: process.stdout,
 	terminal: false
 });
+const matcher = require('./matcher');
 
-rl.setPrompt('foster > ');
+rl.setPrompt('chelsey > ');
 rl.prompt();
 rl.on('line', reply => {
-	console.log(`You said ${reply}`);
-	rl.prompt();
+
 });
