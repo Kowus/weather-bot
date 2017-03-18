@@ -1,7 +1,7 @@
 {
   "name": "weather-bot",
   "version": "1.0.0",
-  "description": "a simple interactive shell node.js bot that check the weather",
+  "description": "a simple rule based interactive node.js bot that check the weather",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sons-of-jerome/weather-bot/issues"
   },
-  "homepage": "https://github.com/sons-of-jerome/weather-bot#readme"
+  "homepage": "https://github.com/sons-of-jerome/weather-bot#readme",
+  "dependencies": {
+    "xregexp": "3.1.1"
+  }
 }
