@@ -12,6 +12,16 @@ rl.setPrompt('jerome > ');
 rl.prompt();
 rl.on('line', reply => {
 	matcher(reply, data => {
-		switch (data.intent) { }
+		switch (data.intent)
+		{
+			case 'Hello':
+				console.log('Hello there');
+				rl.prompt();
+				break;
+			default:
+				console.log("I don't know what you mean by \"%s\" :(", reply);
+				rl.prompt();
+				break;
+		}
 	});
 });
