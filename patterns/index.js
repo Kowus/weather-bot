@@ -3,7 +3,7 @@ const patternDict = [
         pattern: '\\b(?<greeting>Hi|Hello|Hey|yo)\\b',
         intent: 'Hello'
     }, {
-        pattern: '\\b(bye|exit)\\b',
+        pattern: '\\b(bye|exit|goodbye|later)\\b',
         intent: 'Exit'
     }, {
         pattern: '\\blike\\sin\\s(?<city>.+)',
