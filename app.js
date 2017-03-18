@@ -11,5 +11,7 @@ const matcher = require('./matcher');
 rl.setPrompt('jerome > ');
 rl.prompt();
 rl.on('line', reply => {
-	matcher(reply)
+	matcher(reply, data => {
+		switch (data.intent) { }
+	});
 });
