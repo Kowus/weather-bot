@@ -7,6 +7,7 @@ const rl = readline.createInterface({
 });
 const matcher = require('./matcher');
 const weather = require('./weather');
+const { currentWeather } = require('./parser')
 
 rl.setPrompt('jerome > ');
 rl.prompt();
@@ -22,7 +23,8 @@ rl.on('line', reply => {
 				// get weather data from an API
 				weather(data.entities.city, 'current')
 					.then(response => {
-						console.log(response);
+						let parseResult = currentWeather(response);
+						console.log(parseResult);
 						rl.prompt();
 					})
 					.catch(error => {
