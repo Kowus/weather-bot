@@ -5,6 +5,9 @@ const patternDict = [
     }, {
         pattern: '\\b(bye|exit)\\b',
         intent: 'Exit'
+    }, {
+        pattern: '\\blike\\sin\\s(?<city>.+)',
+        intent: 'CurrentWeather'
     }
 ];
 
