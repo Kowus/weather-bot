@@ -20,6 +20,10 @@ let getPrefix = (conditionCode, tense = 'present') => {
     return findPrefix.prefix || "";
 }
 
+let getDate = day => {
+
+}
+
 let currentWeather = response => {
     if (response.query.results) {
         let resp = response.query.results.channel;
@@ -27,8 +31,14 @@ let currentWeather = response => {
         // Access Conditions
         let { text, temp, code } = resp.item.condition;
 
-        return `Right now, ${getPrefix(code)} ${text.toLowerCase().red.bold} in ${location.bold}. It is ${getFeel(Number(temp))} at ${temp.red.bold} degrees Celsius.`
+        return `Right now, ${getPrefix(code)} ${text.toLowerCase().red.bold} in ${location.bold}. It is ${getFeel(Number(temp)).bold.green} at ${temp.bold} degrees Celsius.`
     }
 }
 
-module.exports = { currentWeather }
+let forecastWeather = (response, data) => {
+    if (response.query.results) {
+        // Covert today, tomorrow, etc into actual dates.....
+    }
+}
+
+module.exports = { currentWeather, forecastWeather }
