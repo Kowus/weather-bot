@@ -17,7 +17,7 @@ let getPrefix = (conditionCode, tense = 'present') => {
             return true;
         }
     });
-    return findPrefix || "";
+    return findPrefix.prefix || "";
 }
 
 let currentWeather = response => {
