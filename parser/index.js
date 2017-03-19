@@ -54,7 +54,11 @@ let forecastWeather = (response, data) => {
         let getForecast = resp.item.forecast.filter(item => {
             return item.date === parseDate;
         })[0];
-        return `Yes, ${getPrefix(getForecast.code, 'furure')} ${getForecast.text.bold} in Accra tomorrow`
+        let location = `${resp.location.city}, ${resp.location.country}`;
+        let regEx = new RegExp(data.weather, "i");
+        let testConditions = regEx.test(getForecast.text);
+
+        return `${testConditions ? "Yes" : "No"}, ${getPrefix(getForecast.code, 'future')} ${getForecast.text.bold} in ${location} ${data.time}`
     } else {
         return "I don't seem to know anything about this place... sorry :("
     }
