@@ -25,9 +25,9 @@ let currentWeather = response => {
         let resp = response.query.results.channel;
         let location = `${resp.location.city}, ${resp.location.country}`;
         // Access Conditions
-        let { text, temp } = resp.item.condition;
+        let { text, temp, code } = resp.item.condition;
 
-        return `Right now, it is ${text.toLowerCase().red.bold} in ${location.bold}. It is ${getFeel(Number(temp))} at ${temp.red.bold} degrees Celsius.`
+        return `Right now, ${getPrefix(code)} ${text.toLowerCase().red.bold} in ${location.bold}. It is ${getFeel(Number(temp))} at ${temp.red.bold} degrees Celsius.`
     }
 }
 
